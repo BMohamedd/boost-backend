@@ -3,7 +3,7 @@ const cors = require("cors");
 const gen_report = require("./lighthouse_service");
 
 const app = express();
-const port = 8000 || process.env.PORT;
+const port = process.env.PORT || 8000;
 
 app.use(cors());
 app.use(express.json());
