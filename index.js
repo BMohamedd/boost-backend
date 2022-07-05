@@ -5,7 +5,9 @@ const gen_report = require("./lighthouse_service");
 const app = express();
 const port = process.env.PORT || 8000;
 
-app.use(cors());
+app.use(cors({
+  origin: '*'
+  ));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
