@@ -4,6 +4,7 @@ const mobileConfig = require("lighthouse/lighthouse-core/config/lr-mobile-config
 const chromeLauncher = require("chrome-launcher");
 const gen_report = async (url, device) => {
   const chrome = await chromeLauncher.launch({ chromeFlags: ["--headless"] });
+  console.log(chrome)
   const options = {
     logLevel: "info",
     output: "json",
