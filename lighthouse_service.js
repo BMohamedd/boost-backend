@@ -3,7 +3,7 @@ const desktopConfig = require("lighthouse/lighthouse-core/config/lr-desktop-conf
 const mobileConfig = require("lighthouse/lighthouse-core/config/lr-mobile-config.js");
 const chromeLauncher = require("chrome-launcher");
 const gen_report = async (url, device) => {
-  const chrome = await chromeLauncher.launch({ chromeFlags: ["--headless", "--no-sandbox"] });
+  const chrome = await chromeLauncher.launch({ chromeFlags: ["--headless"] });
   const options = {
     logLevel: "info",
     output: "json",
